@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="Easy Admin Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!-- Bootstrap Core CSS -->
+    <link href="../../static/css/bootstrap.min.css" rel='stylesheet' type='text/css'/>
+    <!-- Custom CSS -->
+    <link href="../../static/css/style.css" rel='stylesheet' type='text/css'/>
+    <!-- Graph CSS -->
+    <link href="../../static/css/font-awesome.css" rel="stylesheet">
+    <!-- jQuery -->
+    <!-- lined-icons -->
+    <link rel="stylesheet" href="../../static/css/icon-font.min.css" type='text/css'/>
+    <!-- //lined-icons -->
+    <!-- chart -->
+    <script src="../../static/js/Chart.js"></script>
+    <!-- //chart -->
+    <!--animate-->
+    <link href="../../static/css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="../../static/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!--//end-animate-->
+    <!----webfonts--->
+    <link href='http://fonts.useso.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic'
+          rel='stylesheet' type='text/css'>
+    <!---//webfonts--->
+    <!-- Meters graphs -->
+    <script src="../../static/js/jquery-1.10.2.min.js"></script>
+    <!-- Placed js at the end of the document so the pages load faster -->
+
+</head>
+
+<body class="sticky-header left-side-collapsed" onload="initMap()">
+<section>
+    <!-- left side start-->
+    <div class="left-side sticky-left-side">
+
+        <!--logo and iconic logo start-->
+        <div class="logo">
+            <h1><a href="inception">Easy <span>Admin</span></a></h1>
+        </div>
+        <div class="logo-icon text-center">
+            <a href="inception"><i class="lnr lnr-home"></i> </a>
+        </div>
+
+        <!--logo and iconic logo end-->
+        <div class="left-side-inner">
+
+            <!--sidebar nav start-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li class="active"><a href="inception"><i class="fa fa-tasks"></i><span>SQL execute</span></a>
+                </li>
+                                <li class="active"><a href="rollback"><i
+                                        class="fa fa-tasks"></i><span>RollBack</span></a></li>
+
+            </ul>
+            <!--sidebar nav end-->
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <!-- //header-ends -->
+        <div id="page-wrapper">
+            <div class="graphs">
+                <h3 class="blank1">SQL语句审核系统</h3>
+
+
+                <div class="form-group">
+                    <label for="selector1">选择数据库：</label>
+
+                    <select name="selector1" id="selector1">
+                        <option>gptbs</option>
+                        <option>wala</option>
+                        <option>report</option>
+                        <option>webdata</option>
+                    </select></div>
+            </div>
+
+
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="horizontal-form">
+
+
+                    <form class="com-mail" action="sqlhandle" method="post">
+                        <div class="form-group">
+
+                            <label>输入需要执行的sql语句 : </label>
+                            <textarea name="mysql" rows="6" class="form-control1 control2"></textarea>
+                        </div>
+                        <input type="submit" value="Submit">
+
+                    </form>
+                </div>
+            </div>
+
+            <div id="page-wrapper">
+                <div class="graphs">
+                    <h2 class="blank1">执行结果:</h2>
+                    <h5 class="blank1">[NONE]表示执行成功</h5>
+                    <div class="grid_3 grid_4">
+                        {% if sql_review != '' %}
+                            {{ sql_review }}
+                        {% endif %}
+                        <hr>
+                        {% if 'None' in result %}
+                            <div class="alert alert-success" role="alert">
+                                <h3>{{ result }}</h3>
+                            </div>
+                        {% else %}
+                            <div class="alert alert-danger" role="alert">
+                                <h3>{{ result }}</h3>
+                            </div>
+                        {% endif %}
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+    <!--footer section end-->
+
+    <!-- main content end-->
+</section>
+
+<script src="../../static/js/jquery.nicescroll.js"></script>
+<script src="../../static/js/scripts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="../../static/js/bootstrap.min.js"></script>
+</body>
+</html>
