@@ -8,6 +8,5 @@ urlpatterns = [
     url(r'^inception$', views.inception),
     url(r'^sqlhandle$', views.sqlhangle),
     url(r'^rollback$', views.rollback),
-    url(r'^sqlrollback$' ,views.sqlrollback)
 
 ]
